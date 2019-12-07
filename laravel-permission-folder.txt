@@ -1,0 +1,7 @@
+webgroup = group with your user and www-data
+
+sudo chown -R myuser:webgroup storage
+sudo chown -R myuser:webgroup bootstrap/cache
+
+chmod -R 775 storage
+chmod -R 775 bootstrap/cache

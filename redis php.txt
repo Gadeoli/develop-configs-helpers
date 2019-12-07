@@ -1,0 +1,4 @@
+1. install redis
+2. set strong password
+3. config env vars
+4. composer install regis/regis ... (if necessary)
