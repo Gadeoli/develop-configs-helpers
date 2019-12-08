@@ -1,4 +1,13 @@
-1. install redis
-2. set strong password
-3. config env vars
-4. composer install regis/regis ... (if necessary)
+install redis
+sudo apt install redis
+
+verify status start && stop commands
+redis-cli --version
+sudo systemctl status redis
+sudo systemctl start redis-server
+sudo systemctl stop redis
+
+config redis file
+sudo vi /etc/redis/redis.conf
+
+Set a strong pwd on configs
