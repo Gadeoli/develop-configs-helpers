@@ -1,0 +1,46 @@
+create site folders
+sudo mkdir -p /var/www/mysite.test/public_html
+sudo mkdir -p /var/www/mysite.test/log
+cd /var/www/mysite.test/log
+nano error.log
+nano access.log
+
+give necessary permissions
+if necessary do that but is better use groups or put your user like owner (sudo chown myuser:root -R ...)
+sudo chmod -R 755 /var/www
+
+create a index file
+sudo nano /var/www/mysite.test/public_html/index.html
+<html>
+   <head>
+   </head>
+   <body>
+      Hello world
+   </body>
+</html>
+
+create a apache vm config file
+sudo nano /etc/apache2/sites-a1vailable/mysite.test.conf
+<VirtualHost *:80>
+    ServerAdmin webmaster@mysite.test
+    ServerName mysite.test
+    ServerAlias www.mysite.test
+    DocumentRoot /var/www/mysite.test/public_html
+    ErrorLog /var/www/mysite.test/error.log
+    CustomLog /var/www/mysite.test/access.log combined
+</VirtualHost>
+
+activate the vm
+sudo a2ensite mysite.test
+
+restart apache
+sudo systemctl reload apache2
+
+if necessary verify a test
+apachectl configtest
+
+mod rewrite
+sudo a2enmod rewrite
+
+for delete site
+sudo a2dissite mysite.test
