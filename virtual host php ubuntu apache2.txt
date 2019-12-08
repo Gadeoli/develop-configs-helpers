@@ -10,7 +10,7 @@ if necessary do that but is better use groups or put your user like owner (sudo 
 sudo chmod -R 755 /var/www
 
 create a index file
-sudo nano /var/www/mysite.test/public_html/index.html
+sudo nano /var/www/mysite.test/public_html/index.php
 <html>
    <head>
    </head>
