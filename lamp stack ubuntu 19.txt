@@ -23,6 +23,12 @@ sudo ufw allow in "Apache Full"
 Here is the link to video that we created recently to install MYSQL:
 
 sudo apt-get install mysql-server
+
+go to your download folder
+curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+sudo dpkg -i mysql-apt-config*
+sudo apt update
+
 sudo mysql_secure_installation
 choose a level of your password and falow the steps
 
@@ -47,5 +53,6 @@ sudo a2enconf phpmyadmin
 sudo systemctl restart apache2
 
 If apt is not avaliable just force instalation from composer
-Navagate to /var/www/html
-composer create-project phpmyadmin/phpmyadmin
+sudo add-apt-repository ppa:phpmyadmin/ppa
+sudo apt update
+sudo apt install phpmyadmin

@@ -1,3 +1,24 @@
 run on terminal
 sudo mysql
+ou sudo mysql -u root -p
+
+
+ALTERAR SENHA
 mysql>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password you want to use';
+
+NOVO BANCO E USUARIO
+CREATE DATABASE IF NOT EXISTS dbname;
+CREATE USER IF NOT EXISTS username@localhost IDENTIFIED BY 'someRandomPassword';
+GRANT ALL PRIVILEGES ON *.* TO username@localhost WITH GRANT OPTION;
+
+Allow password change
+mysql> select plugin_name, plugin_status from information_schema.plugins where plugin_name like 'validate%';
+mysql> install plugin validate_password soname 'validate_password.so';
+mysql> select plugin_name, plugin_status from information_schema.plugins where plugin_name like 'validate%';
+
++-------------------+---------------+
+| plugin_name       | plugin_status |
++-------------------+---------------+
+| validate_password | ACTIVE        |
++-------------------+---------------+
+1 row in set (0.00 sec)
