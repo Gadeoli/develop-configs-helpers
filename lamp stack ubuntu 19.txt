@@ -56,3 +56,6 @@ If apt is not avaliable just force instalation from composer
 sudo add-apt-repository ppa:phpmyadmin/ppa
 sudo apt update
 sudo apt install phpmyadmin
+
+if necessary reconfigure phpmyadmin
+sudo dpkg-reconfigure phpmyadmin
