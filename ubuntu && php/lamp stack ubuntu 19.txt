@@ -33,6 +33,10 @@ sudo gedit /etc/apache2/mods-enabled/dir.conf
 sudo systemctl restart apache2
 sudo systemctl status apache2
 
+#activate mod rewrite
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+
 #Test
 sudo gedit /var/www/html/file.php
 
