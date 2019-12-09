@@ -1,0 +1,2 @@
+#prevent errors with state not ready with:
+this_isMounted

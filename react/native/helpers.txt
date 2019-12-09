@@ -1,0 +1,10 @@
+#start with
+npm install -g react-native-cli
+react-native init
+react-native run android
+react-native
+
+#emulator
+emulator -list-avds
+emulator -no-snapshot -avd avdname
+
