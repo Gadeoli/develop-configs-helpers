@@ -1,0 +1,9 @@
+#download and install oracle virtual box
+
+#download and create a kali virtual machine
+#preference to the complete version
+
+#download and create a metasploitable virtual machine
+
+#create a Nat Network on virtual box to use in all virtual machines
+

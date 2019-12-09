@@ -1,14 +1,14 @@
-install redis
+#install redis
 sudo apt install redis
 
-verify status start && stop commands
+#verify status start && stop commands
 redis-cli --version
 sudo systemctl status redis
 sudo systemctl start redis-server
 sudo systemctl stop redis
 
-config redis file
+#config redis file
 sudo nano /etc/redis/redis.conf
 
-Set a strong pwd on configs
+#Set a strong pwd on configs
 requirepass MYSTRONGPASSWORD

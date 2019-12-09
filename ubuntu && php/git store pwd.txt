@@ -1,1 +1,2 @@
+#save git user and pass to next pushes
 git config --global credential.helper store

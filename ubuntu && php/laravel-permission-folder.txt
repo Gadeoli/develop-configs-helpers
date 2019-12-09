@@ -1,3 +1,4 @@
+#laravel permission folder to run on apache server
 webgroup = group with your user and www-data
 
 sudo chown -R myuser:webgroup storage
