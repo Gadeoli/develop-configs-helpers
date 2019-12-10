@@ -1,5 +1,23 @@
 #install
 sudo apt install dnsmasq
+
+sudo nano /etc/NetworkManager/NetworkManager.conf
+uncomment
+dns=dnsmasq
+
 sudo nano /etc/dnsmasq.conf
-remove # from bindinterface line
+uncomment 
+bindinterface
+add
+listen-address=127.0.0.1
+
+sudo nano /etc/dhcp/dhclient.conf
+uncomment
+prepend domain-name-servers 127.0.0.1;
+
+
+restart NetworkManager, dnsmasq 
+refresh dns
+sudo NetworkManager restart
 sudo systemctl restart dnsmasq
+sudo dhclient
