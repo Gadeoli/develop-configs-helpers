@@ -8,3 +8,4 @@ sudo apt remove
 #last option
 ls -l /var/lib/dpkg/info | grep -i packegename
 sudo mv /var/lib/dpkg/info/pachegename* /tmp
+
