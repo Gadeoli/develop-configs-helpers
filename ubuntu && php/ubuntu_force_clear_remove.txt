@@ -1,0 +1,10 @@
+#Helpers to remove && forde delete
+#try 1
+sudo dpkg --configure -a
+#try 2
+sudo apt-get install -f
+#try 3
+sudo apt remove 
+#last option
+ls -l /var/lib/dpkg/info | grep -i packegename
+sudo mv /var/lib/dpkg/info/pachegename* /tmp
