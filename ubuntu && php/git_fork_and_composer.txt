@@ -1,0 +1,26 @@
+#Fork repo
+1. Fork on git website
+2. Clone the original repo on your local machine
+3. Change the local repo url (your fork url)
+	git remote set-url origin https://github.com/youruser/yourfork
+4. Make your changes
+5. To push
+	git add .
+	git commit -m 'xpto commit'
+	git push
+6. To use your fork on composer, create a dev-fix branch
+	git checkout -b dev-fix
+	git push --set-upstream origin dev-fix
+7. On your composer.json (php project) insert the fallow:
+	"repositories": [
+		{
+		    "name": "hyn/multi-tenant",
+		    "type": "vcs",
+		    "url": "https://github.com/youruser/yourfork"
+		},
+	],
+	"require": {
+	        "packege/name": "dev-dev-fix"
+	},
+
+

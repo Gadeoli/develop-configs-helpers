@@ -1,0 +1,9 @@
+#install
+sudo apt install dnsmasq
+sudo nano /etc/dnsmasq.conf
+#change port
+port=5353
+#change listen-address
+listen-address=127.0.0.1
+
+#
