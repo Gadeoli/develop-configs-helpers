@@ -1,0 +1,3 @@
+#good with cross platform developments
+#use this code on windows machines
+git config core.autocrlf true
