@@ -1,23 +1,22 @@
-#install
+#install and configure dnsmasq to run subdomain free on localhost
+(wildcard on localhost)
+
 sudo apt install dnsmasq
 
 sudo nano /etc/NetworkManager/NetworkManager.conf
-uncomment
-dns=dnsmasq
+uncomment > dns=dnsmasq
 
 sudo nano /etc/dnsmasq.conf
-uncomment 
-bindinterface
-add
-listen-address=127.0.0.1
+uncomment > bindinterface
+add line > listen-address=127.0.0.1
 
 sudo nano /etc/dhcp/dhclient.conf
-uncomment
-prepend domain-name-servers 127.0.0.1;
+uncomment > prepend domain-name-servers 127.0.0.1;
 
+sudo nano /etc/dnsmasq.d/myhostname
+add line > address/myhostname/127.0.0.1
 
-restart NetworkManager, dnsmasq 
-refresh dns
+restart NetworkManager, dnsmasq & refresh dns
 sudo NetworkManager restart
 sudo systemctl restart dnsmasq
 sudo dhclient
