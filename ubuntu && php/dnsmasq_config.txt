@@ -4,19 +4,14 @@
 sudo apt install dnsmasq
 
 sudo nano /etc/NetworkManager/NetworkManager.conf
-uncomment > dns=dnsmasq
+uncomment and put on main section > dns=dnsmasq
 
-sudo nano /etc/dnsmasq.conf
-uncomment > bindinterface
-add line > listen-address=127.0.0.1
+sudo nano /etc/resolv.conf
+put the line > nameserver 127.0.0.1
 
-sudo nano /etc/dhcp/dhclient.conf
-uncomment > prepend domain-name-servers 127.0.0.1;
+cd /etc/NetworkManager/NetworkManager/dnsmasq.d
+nano dnsmasq-localhost.conf
+address=/.mydomain.xpto/127.0.0.1
 
-sudo nano /etc/dnsmasq.d/myhostname
-add line > address/myhostname/127.0.0.1
+reboot the system
 
-restart NetworkManager, dnsmasq & refresh dns
-sudo NetworkManager restart
-sudo systemctl restart dnsmasq
-sudo dhclient

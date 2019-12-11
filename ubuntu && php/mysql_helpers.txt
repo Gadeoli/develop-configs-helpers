@@ -27,7 +27,7 @@ mysql> select plugin_name, plugin_status from information_schema.plugins where p
 
 #Change security pwd vars
 show global variables like 'validate_password%';
-SET GLOBAL validate_password_policy=LOW;
+SET GLOBAL validate_password_policy=0; //LOW
 
 #Complete remove
 sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
