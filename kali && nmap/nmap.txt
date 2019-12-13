@@ -1,0 +1,25 @@
+#sites
+nmap.org/nsedoc
+exploit-db.com
+
+#Devices scan
+nmap -sn ipdarede/24 -n -oN hosts.txt
+or
+nmap -sn ipdarede-255 -n -oN hosts.txt
+
+#Ports scan
+#TCP
+nmap -sS -p22,80
+or
+nmap -sS -p0-65000
+nmap -sS -p- 127.0.0.17,18 -oN scan_tcp.txt
+
+#UDP
+nmap -sU 127.0.0.10 -oN scan_udp.txt 
+#press enter to see progress (take few minutes)
+
+#Script scan
+nmap -A 127.0.20.4 -oN scan_scripts.txt
+
+#Service scan
+nmap -O 127.0.0.2 -oN scan_services.txt
