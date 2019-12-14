@@ -1,0 +1,53 @@
+#security framework
+    #exploits
+    #payloads
+    #secondary modules
+
+#postgresqlneed to be active
+service postgresql status 
+service postgresql start
+
+#config metasproit db
+msfdb init
+
+#access metasploit terminal
+msfconsole
+
+#metasploit commands
+
+#mtf search
+>search ...
+
+#mtf help
+> search -h 
+
+#use exploits
+> use exploit path
+#show options to see exploit options
+> show options
+#set exploit params
+> set paramsname paramvalue
+#run exploit
+> exploit
+or
+> run
+
+#verify if db if connected
+> db_status
+
+#nmap commands
+db_nmap ...commands
+
+#scan ips
+> db_nmap iptoscan -sV -O -p
+#then
+# see ports infos services etc
+> services
+or
+# see ips / so's etc
+> hosts
+or
+# see a list of vunls
+> vulns
+
+  
