@@ -9,3 +9,8 @@
 
 #vulnhub.com
 get vunerable vms
+
+#courses 
+offensive-security.com/metasploit-unleashed
+kali.training
+kali.org/tools-listing
