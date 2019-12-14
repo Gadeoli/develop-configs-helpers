@@ -7,3 +7,5 @@
 
 #create a Nat Network on virtual box to use in all virtual machines
 
+#vulnhub.com
+get vunerable vms
