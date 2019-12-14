@@ -23,3 +23,14 @@ nmap -A 127.0.20.4 -oN scan_scripts.txt
 
 #Service scan
 nmap -O 127.0.0.2 -oN scan_services.txt
+
+#Find user list on a SMB connection
+#save the user list on a folder to use in the next command
+nmap --script -p445 smb-enum-users ipdamaquina | grep "METASPLOITABLE" > users
+
+#Smb Brute force
+nmap -p445 -Pn --script smb-brute --script-args userdb=/dirname/usersfile,passdb=/dirname/passfile
+
+#SMB
+nmap --script mysql-empty-password -p3306 iptarget
+nmap --script mysql-info -p3306 iptarget

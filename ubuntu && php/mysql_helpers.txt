@@ -25,9 +25,12 @@ mysql> select plugin_name, plugin_status from information_schema.plugins where p
 +-------------------+---------------+
 1 row in set (0.00 sec)
 
-#Change security pwd vars
+#Change security pwd vars not permanently
 show global variables like 'validate_password%';
 SET GLOBAL validate_password_policy=0; //LOW
+#if necessary edit value on /etc/mysql/my.cnf
+[mysqld]
+validate_password.policy=0
 
 #Complete remove
 sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
