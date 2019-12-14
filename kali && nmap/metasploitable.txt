@@ -1,5 +1,0 @@
-#default access
-msfadmin / msfadmin
-
-#shutdown
-sudo shutdown -h -o
