@@ -1,0 +1,3 @@
+#back commits number 1, 2... etc equal number of back commits
+git reset HEAD~1 --hard
+#confirm with push
