@@ -1,0 +1,9 @@
+Download Sql PHP extension - v40 to php 7 (get the right version)
+https://github.com/Microsoft/msphpsql/releases
+
+extract files and activate ts files version to windows (x86 or x64 - verify your so):
+- rename files to php_pdo_sqlsrv.dll && php_pdo_sqlsrv.dll and paste on ext php-folder
+- on php.ini add
+extension=pdo_sqlsrv
+extension=sqlsrv
+
